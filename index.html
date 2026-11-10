@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="sw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101010">
+<title>OBEDY WORLD MOVIE BANK</title>
+<style>
+:root{--gold:#e0b84f;--bg:#101010;--panel:#1b1b1b;--muted:#b9b9b9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+header{padding:24px 16px;text-align:center;background:linear-gradient(135deg,#090909,#282015);border-bottom:2px solid var(--gold)}
+.brand{font-weight:900;letter-spacing:1.2px;font-size:clamp(24px,6vw,36px);color:var(--gold)}
+.tag{font-size:13px;letter-spacing:2px;color:#eee}
+.location{font-size:13px;color:var(--muted);margin-top:8px}
+nav{display:flex;gap:8px;overflow:auto;padding:12px;background:#171717;position:sticky;top:0;z-index:2}
+nav a{color:#fff;text-decoration:none;white-space:nowrap;padding:8px 12px;border:1px solid #444;border-radius:20px;font-size:13px}
+nav a:hover{border-color:var(--gold);color:var(--gold)}
+main{max-width:900px;margin:auto;padding:18px 14px 50px}
+.hero{padding:22px 18px;border:1px solid #4c4024;border-radius:14px;background:linear-gradient(135deg,#211d14,#171717);margin-bottom:22px}
+h1,h2{margin-top:0}h2{color:var(--gold);font-size:21px}
+p{color:#ddd}.small{font-size:13px;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{display:inline-block;background:var(--gold);color:#17120a;text-decoration:none;border:0;border-radius:8px;padding:11px 15px;font-weight:700;cursor:pointer}
+.btn.secondary{background:#303030;color:#fff;border:1px solid #555}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:13px}
+.movie{background:var(--panel);border:1px solid #353535;border-radius:12px;overflow:hidden}
+.movie img{width:100%;aspect-ratio:3/4;object-fit:cover;background:#292929;display:block}
+.movie .info{padding:11px}.movie h3{font-size:16px;margin:0 0 5px}.movie p{font-size:13px;margin:0 0 10px;color:var(--muted)}
+.price{color:var(--gold);font-weight:700;font-size:14px}
+section{margin:26px 0}
+.panel{background:var(--panel);border:1px solid #383838;border-radius:12px;padding:16px}
+label{display:block;margin:10px 0 5px;color:#ddd;font-size:14px}
+input,textarea,select{width:100%;padding:11px;border-radius:8px;border:1px solid #555;background:#101010;color:#fff;font:inherit}
+textarea{min-height:70px;resize:vertical}
+.notice{padding:12px;border-left:3px solid var(--gold);background:#211d14;color:#ddd;font-size:13px}
+.hidden{display:none!important}
+footer{text-align:center;padding:24px 12px;border-top:1px solid #333;color:var(--muted);font-size:13px}
+a{color:var(--gold)}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">OBEDY WORLD<br>MOVIE BANK</div>
+  <div class="tag">QUALITY ENTERTAINMENT SERVICES</div>
+  <div class="location">Mbeya Uyole, Mtaa wa Chemchem</div>
+</header>
+<nav>
+  <a href="#home">HOME</a><a href="#movies">MOVIES</a><a href="#series">SERIES</a><a href="#packages">VIFURUSHI</a><a href="#paid">NILIZO LIPIA</a><a href="#support">MSAADA</a><a href="#admin">ADMIN</a>
+</nav>
+<main>
+  <section id="home" class="hero">
+    <h1>Karibu OBEDY WORLD MOVIE BANK</h1>
+    <p>Chagua burudani unayoipenda. Kwa maelezo na maombi ya kufunguliwa, wasiliana nasi kupitia WhatsApp.</p>
+    <div class="actions"><a class="btn" href="https://wa.me/255792055563?text=Habari%20OBEDY%20WORLD%20MOVIE%20BANK">Wasiliana WhatsApp</a><a class="btn secondary" href="#movies">Tazama katalogi</a></div>
+  </section>
+
+  <section id="movies">
+    <h2>Movies</h2>
+    <div id="movieList" class="grid"></div>
+    <p id="emptyMovies" class="small">Bado hakuna movie zilizowekwa. Tafadhali tembelea tena baadaye.</p>
+  </section>
+
+  <section id="series">
+    <h2>Series</h2>
+    <div id="seriesList" class="grid"></div>
+    <p id="emptySeries" class="small">Bado hakuna series zilizowekwa.</p>
+  </section>
+
+  <section id="packages" class="panel">
+    <h2>Vifurushi</h2>
+    <p><strong>Movie moja:</strong> <span class="price">TSh 1,000</span></p>
+    <p><strong>Season nzima:</strong> <span class="price">TSh 2,000</span></p>
+    <p class="small">Bei hizi ni za katalogi. Thibitisha malipo na upatikanaji wa maudhui kupitia WhatsApp kabla ya kulipa.</p>
+  </section>
+
+  <section id="paid" class="panel">
+    <h2>Nilizo lipia</h2>
+    <p>Kwa sasa, historia ya malipo na kufunguliwa kwa video haijaunganishwa kwenye tovuti hii. Tuma uthibitisho wa malipo kwa msimamizi kupitia WhatsApp.</p>
+    <a class="btn" href="https://wa.me/255792055563?text=Habari%2C%20naomba%20kuthibitisha%20malipo%20yangu.">Tuma uthibitisho WhatsApp</a>
+  </section>
+
+  <section id="support" class="panel">
+    <h2>Msaada</h2>
+    <p>WhatsApp: <strong>0792055563</strong></p>
+    <a class="btn" href="https://wa.me/255792055563?text=Habari%20OBEDY%20WORLD%20MOVIE%20BANK">Pata msaada</a>
+  </section>
+
+  <section id="admin" class="panel">
+    <h2>Admin Dashboard</h2>
+    <p class="notice">Hii ni demo ya kuhifadhi taarifa kwenye browser ya kifaa hiki pekee. Si mfumo salama wa admin wa mtandaoni; movie ulizoongeza hapa hazitaonekana kwa wateja wengine wala kwenye simu nyingine.</p>
+    <div id="loginBox">
+      <label for="pin">PIN ya demo</label>
+      <input id="pin" type="password" inputmode="numeric" placeholder="Ingiza PIN">
+      <div class="actions"><button class="btn" onclick="login()">Ingia Admin</button></div>
+      <p class="small">PIN ya majaribio: 2468</p>
+    </div>
+    <div id="adminBox" class="hidden">
+      <label for="title">Jina la movie au series</label><input id="title" placeholder="Mfano: The Great Journey">
+      <label for="kind">Aina</label><select id="kind"><option value="movie">Movie</option><option value="series">Series</option></select>
+      <label for="desc">Maelezo mafupi</label><textarea id="desc" placeholder="Maelezo..."></textarea>
+      <label for="image">Link ya picha (URL)</label><input id="image" type="url" placeholder="https://...">
+      <label for="price">Bei (TSh)</label><select id="price"><option value="1000">Movie - 1,000</option><option value="2000">Season nzima - 2,000</option></select>
+      <div class="actions"><button class="btn" onclick="addItem()">Hifadhi kwenye simu hii</button><button class="btn secondary" onclick="logout()">Toka Admin</button></div>
+      <div id="adminItems"></div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="year"></span> OBEDY WORLD MOVIE BANK · QUALITY ENTERTAINMENT SERVICES</footer>
+<script>
+const KEY='obedy_movie_bank_demo_items_v1';
+const readItems=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}};
+const saveItems=items=>localStorage.setItem(KEY,JSON.stringify(items));
+function safeText(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function card(item){const img=item.image?`<img src="${safeText(item.image)}" alt="${safeText(item.title)}" onerror="this.style.display='none'">`:'';return `<article class="movie">${img}<div class="info"><h3>${safeText(item.title)}</h3><p>${safeText(item.desc)}</p><div class="price">TSh ${Number(item.price).toLocaleString('en-US')}</div><p class="small">${item.kind==='series'?'Season nzima':'Movie moja'}</p><a class="btn" href="https://wa.me/255792055563?text=${encodeURIComponent('Habari, naomba maelezo ya '+item.title)}">Uliza WhatsApp</a></div></article>`}
+function render(){const items=readItems();for(const kind of ['movie','series']){const list=items.filter(x=>x.kind===kind);document.getElementById(kind==='movie'?'movieList':'seriesList').innerHTML=list.map(card).join('');document.getElementById(kind==='movie'?'emptyMovies':'emptySeries').classList.toggle('hidden',list.length>0)}renderAdmin();}
+function login(){if(document.getElementById('pin').value==='2468'){document.getElementById('loginBox').classList.add('hidden');document.getElementById('adminBox').classList.remove('hidden');renderAdmin()}else alert('PIN si sahihi');}
+function logout(){document.getElementById('adminBox').classList.add('hidden');document.getElementById('loginBox').classList.remove('hidden');document.getElementById('pin').value=''}
+function addItem(){const title=document.getElementById('title').value.trim();if(!title){alert('Weka jina la movie au series');return}const item={id:Date.now().toString(),title,kind:document.getElementById('kind').value,desc:document.getElementById('desc').value.trim(),image:document.getElementById('image').value.trim(),price:document.getElementById('price').value};const items=readItems();items.unshift(item);saveItems(items);['title','desc','image'].forEach(id=>document.getElementById(id).value='');render();alert('Imehifadhiwa kwenye browser hii pekee.');}
+function removeItem(id){if(!confirm('Una uhakika unataka kufuta?'))return;saveItems(readItems().filter(x=>x.id!==id));render();}
+function renderAdmin(){const box=document.getElementById('adminItems');if(!box||document.getElementById('adminBox').classList.contains('hidden'))return;box.innerHTML='<h3>Movie na Series zilizohifadhiwa kwenye simu hii</h3>'+readItems().map(x=>`<div class="panel" style="margin:8px 0"><strong>${safeText(x.title)}</strong><p class="small">${x.kind==='series'?'Series':'Movie'}</p><button class="btn secondary" onclick="removeItem('${safeText(x.id)}')">Futa</button></div>`).join('');}
+document.getElementById('year').textContent=new Date().getFullYear();render();
+</script>
+</body>
+</html>
